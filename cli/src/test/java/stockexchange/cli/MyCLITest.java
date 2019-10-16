@@ -10,4 +10,9 @@ class MyCLITest {
     void test() {
         assertTrue(true);
     }
+
+    @Test
+    void test2() {
+        assertTrue(false);
+    }
 }
