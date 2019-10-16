@@ -13,8 +13,7 @@ pipeline {
         }
         stage('cli-test') {
             steps {
-            bat 'mvn clean compile'
-                bat 'mvn test -pl :cli'
+                bat 'mvn clean test -pl :cli'
             }
         }
     }
