@@ -14,7 +14,7 @@ pipeline {
         stage('test') {
             steps {
                 bat 'mvn test'
-                junit allowEmptyResults: true, testResults: '**/build/test-reports/*.xml'
+                junit allowEmptyResults: true, keepLongStdio: true, testResults: ''
             }
         }
     }
