@@ -6,9 +6,15 @@ pipeline {
     }
 
     stages {
-        stage('cli-test') {
+            stage('build') {
+                steps {
+                    bat 'mvn clean test-compile'
+                }
+            }
+        stage('test') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn test'
+                junit 'testresults/**/*.xml'
             }
         }
     }
