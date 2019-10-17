@@ -17,7 +17,7 @@ pipeline {
                 junit allowEmptyResults: true, keepLongStdio: true, testResults: 'testResults/*.xml'        }
 }
 
-        stages ('archive') {
+        stage ('archive') {
             steps {
             archiveArtifacts allowEmptyArchive: true, artifacts: 'cli-1.0-SNAPSHOT-jar-with-dependencies.jar'
             }
