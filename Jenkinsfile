@@ -14,13 +14,7 @@ pipeline {
         stage('test') {
             steps {
                 bat 'mvn test'
-                            junit allowEmptyResults: true, keepLongStdio: true, testResults: 'simon-desmet-stock-exchange-cli/target/surefire-reports/TEST-stockexchange.cli.MyCLITest.xml'
-
-            }
-        }
-
-        stage ('publish-test-results') {
-            steps {
+                junit allowEmptyResults: true, keepLongStdio: true, testResults: 'cli/target/surefire-reports/TEST-stockexchange.cli.MyCLITest.xml'
 
             }
         }
