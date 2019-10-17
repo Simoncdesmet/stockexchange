@@ -18,7 +18,8 @@ pipeline {
 
         stage ('publish-test-results') {
             steps {
-            archiveArtifacts allowEmptyArchive: true, artifacts: 'cli/**/*.jar'
+            junit allowEmptyResults: true, keepLongStdio: true, testResults: 'cli/target/surefire-reports/TEST-stockexchange.cli.MyCLITest.xml'        }
+
             }
         }
     }
