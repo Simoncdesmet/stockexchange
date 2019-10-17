@@ -23,6 +23,6 @@ class MyCLITest {
 
     @Test
     void test4() {
-        assertFalse(false);
+        assertFalse(true);
     }
 }
