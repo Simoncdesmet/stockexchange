@@ -15,4 +15,14 @@ class MyCLITest {
     void test2() {
         assertFalse(false);
     }
+
+    @Test
+    void test3() {
+        assertFalse(false);
+    }
+
+    @Test
+    void test4() {
+        assertFalse(true);
+    }
 }
