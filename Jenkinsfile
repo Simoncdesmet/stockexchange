@@ -14,12 +14,12 @@ pipeline {
         stage('test') {
             steps {
                 bat 'mvn test'
-                junit allowEmptyResults: true, keepLongStdio: true, testResults: 'testResults/*.xml'        }
+                junit allowEmptyResults: true, keepLongStdio: true, testResults: 'cli/target/surefire-reports/TEST-stockexchange.cli.MyCLITest.xml'        }
 }
 
         stage ('archive') {
             steps {
-            archiveArtifacts allowEmptyArchive: true, artifacts: 'cli-1.0-SNAPSHOT-jar-with-dependencies.jar'
+            archiveArtifacts allowEmptyArchive: true, artifacts: 'cli/**/*.jar'
             }
         }
     }
