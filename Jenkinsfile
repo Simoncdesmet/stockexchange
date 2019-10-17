@@ -16,6 +16,9 @@ pipeline {
                 bat 'mvn test'
                 junit allowEmptyResults: true, keepLongStdio: true, testResults: 'testResults/*.xml'        }
         }
+
+    //archiveArtifacts allowEmptyArchive: true, artifacts: 'cli-1.0-SNAPSHOT-jar-with-dependencies.jar'
+
     }
-    archiveArtifacts allowEmptyArchive: true, artifacts: 'cli-1.0-SNAPSHOT-jar-with-dependencies.jar'
+
 }
